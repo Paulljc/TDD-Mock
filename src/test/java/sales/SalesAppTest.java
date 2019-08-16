@@ -60,5 +60,23 @@ public class SalesAppTest {
         Assert.assertEquals("SalesActivity", filteredReportDataList.get(0).getType());
     }
 
+    @Test
+    public void testFilterList_givenReportDataAndIsNotSupervisor_thenGetNull() {
+        //given
+        Sales sales = new Sales();
+        SalesReportData salesReportData = mock(SalesReportData.class);
+        when(salesReportData.getType()).thenReturn("SalesActivity");
+        when(salesReportData.isConfidential()).thenReturn(true);
+        List<SalesReportData> reportDataList = Arrays.asList(new SalesReportData(), salesReportData);
+        when(salesReportDao.getReportData(sales)).thenReturn(reportDataList);
+
+        //when
+        List<SalesReportData> filteredReportDataList = new ArrayList<>();
+        filteredReportDataList = salesApp.filterReport(reportDataList, false, filteredReportDataList);
+
+        //then
+        Assert.assertEquals(0, filteredReportDataList.size());
+    }
+
     
 }
