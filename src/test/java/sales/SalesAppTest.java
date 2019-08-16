@@ -78,46 +78,61 @@ public class SalesAppTest {
         Assert.assertEquals(0, filteredReportDataList.size());
     }
 
-	@Test
-	public void testGenerateTempList_givenThreeReportDataAndMaxRowIs4_thenGenerateThreeTempList(){
-		//given
-		Sales sales = new Sales();
-		List<SalesReportData> reportDataList = Arrays.asList(new SalesReportData(), new SalesReportData(), new SalesReportData());
-		when(salesReportDao.getReportData(sales)).thenReturn(reportDataList);
+    @Test
+    public void testGenerateTempList_givenThreeReportDataAndMaxRowIs4_thenGenerateThreeTempList() {
+        //given
+        Sales sales = new Sales();
+        List<SalesReportData> reportDataList = Arrays.asList(new SalesReportData(), new SalesReportData(), new SalesReportData());
+        when(salesReportDao.getReportData(sales)).thenReturn(reportDataList);
 
-		//when
-		List<SalesReportData> filteredReportDataList = new ArrayList<>();
-		filteredReportDataList = salesApp.generateTempList(4, reportDataList);
+        //when
+        List<SalesReportData> filteredReportDataList = new ArrayList<>();
+        filteredReportDataList = salesApp.generateTempList(4, reportDataList);
 
-		//then
-		Assert.assertEquals(3, filteredReportDataList.size());
-	}
+        //then
+        Assert.assertEquals(3, filteredReportDataList.size());
+    }
 
-	@Test
-	public void testGenerateTempList_givenThreeReportDataAndMaxRowIs2_thenGenerateTwoTempList(){
-		//given
-		Sales sales = new Sales();
-		List<SalesReportData> reportDataList = Arrays.asList(new SalesReportData(), new SalesReportData(), new SalesReportData());
-		when(salesReportDao.getReportData(sales)).thenReturn(reportDataList);
+    @Test
+    public void testGenerateTempList_givenThreeReportDataAndMaxRowIs2_thenGenerateTwoTempList() {
+        //given
+        Sales sales = new Sales();
+        List<SalesReportData> reportDataList = Arrays.asList(new SalesReportData(), new SalesReportData(), new SalesReportData());
+        when(salesReportDao.getReportData(sales)).thenReturn(reportDataList);
 
-		//when
-		List<SalesReportData> filteredReportDataList = new ArrayList<>();
-		filteredReportDataList = salesApp.generateTempList(2, reportDataList);
+        //when
+        List<SalesReportData> filteredReportDataList = new ArrayList<>();
+        filteredReportDataList = salesApp.generateTempList(2, reportDataList);
 
-		//then
-		Assert.assertEquals(2, filteredReportDataList.size());
-	}
+        //then
+        Assert.assertEquals(2, filteredReportDataList.size());
+    }
 
-	@Test
-	public void testGenerateHeaders_givenIsNatTrade_thenContainLocalTime() {
-		//given
-		SalesApp salesApp = new SalesApp();
-		boolean isNatTrade = false;
+    @Test
+    public void testGenerateHeaders_givenIsNatTrade_thenContainLocalTime() {
+        //given
+        SalesApp salesApp = new SalesApp();
+        boolean isNatTrade = false;
 
-		//when
-		List<String> headers = salesApp.generateHeaders(isNatTrade);
+        //when
+        List<String> headers = salesApp.generateHeaders(isNatTrade);
 
-		//then
-		Assert.assertTrue(headers.contains("Local Time"));
-	}
+        //then
+        Assert.assertTrue(headers.contains("Local Time"));
+    }
+
+    @Test
+    public void testTransferReportToXml_givenSalesActivityReport_thenInvokeUploadDocument() {
+        //given
+        EcmService spyEcmService = spy(new EcmService());
+        SalesActivityReport spyActivityReport = spy(new SalesActivityReport());
+
+        //when
+        SalesApp salesApp = new SalesApp();
+        salesApp.transferReportToXml(spyEcmService, spyActivityReport);
+
+        //then
+        verify(spyEcmService, times(1)).uploadDocument(any());
+        verify(spyActivityReport, times(1)).toXml();
+    }
 }
