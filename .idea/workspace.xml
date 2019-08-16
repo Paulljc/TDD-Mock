@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dce67e7d-a029-4be0-9f1d-91810d6db763" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ProjectId" id="1PUrwTnNsDyzN1T138ddZsinMET" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.VipParkingStrategyTest">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InOrderParkingStrategyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parking" />
+      <option name="MAIN_CLASS_NAME" value="parking.InOrderParkingStrategyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InOrderParkingStrategyTest.testCreateReceipt_givenACarAndAParkingLog_thenGiveAReceiptWithCarNameAndParkingLotName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parking" />
+      <option name="MAIN_CLASS_NAME" value="parking.InOrderParkingStrategyTest" />
+      <option name="METHOD_NAME" value="testCreateReceipt_givenACarAndAParkingLog_thenGiveAReceiptWithCarNameAndParkingLotName" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InOrderParkingStrategyTest.testPark_givenThereIsOneFullParkingLot_thenCreateReceipt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parking" />
+      <option name="MAIN_CLASS_NAME" value="parking.InOrderParkingStrategyTest" />
+      <option name="METHOD_NAME" value="testPark_givenThereIsOneFullParkingLot_thenCreateReceipt" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InOrderParkingStrategyTest.testPark_givenThereIsOneParkingLotWithSpace_thenCreateReceipt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parking" />
+      <option name="MAIN_CLASS_NAME" value="parking.InOrderParkingStrategyTest" />
+      <option name="METHOD_NAME" value="testPark_givenThereIsOneParkingLotWithSpace_thenCreateReceipt" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VipParkingStrategyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parking" />
+      <option name="MAIN_CLASS_NAME" value="parking.VipParkingStrategyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.VipParkingStrategyTest" />
+        <item itemvalue="JUnit.InOrderParkingStrategyTest" />
+        <item itemvalue="JUnit.InOrderParkingStrategyTest.testPark_givenThereIsOneFullParkingLot_thenCreateReceipt" />
+        <item itemvalue="JUnit.InOrderParkingStrategyTest.testPark_givenThereIsOneParkingLotWithSpace_thenCreateReceipt" />
+        <item itemvalue="JUnit.InOrderParkingStrategyTest.testCreateReceipt_givenACarAndAParkingLog_thenGiveAReceiptWithCarNameAndParkingLotName" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dce67e7d-a029-4be0-9f1d-91810d6db763" name="Default Changelist" comment="" />
+      <created>1565939754347</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565939754347</updated>
+    </task>
+    <servers />
+  </component>
+</project>
