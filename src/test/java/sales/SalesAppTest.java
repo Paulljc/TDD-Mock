@@ -108,5 +108,16 @@ public class SalesAppTest {
 		Assert.assertEquals(2, filteredReportDataList.size());
 	}
 
-	
+	@Test
+	public void testGenerateHeaders_givenIsNatTrade_thenContainLocalTime() {
+		//given
+		SalesApp salesApp = new SalesApp();
+		boolean isNatTrade = false;
+
+		//when
+		List<String> headers = salesApp.generateHeaders(isNatTrade);
+
+		//then
+		Assert.assertTrue(headers.contains("Local Time"));
+	}
 }
